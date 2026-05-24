@@ -1,6 +1,6 @@
-package BasicsofJava;
+package BasicsofJava.operators;
 
-public class arithemetic {
+public class ArithmeticOperators {
     public  static  void  main(String[] args){
         int x = 5;
         int y = 2;
@@ -10,3 +10,5 @@ public class arithemetic {
         System.out.println(x / y); // print the quotient (division)
     }
 }
+
+
