@@ -8,6 +8,7 @@ public class ArithmeticOperators {
         System.out.println(x - y); // prints the difference (subtraction)
         System.out.println(x * y); // prints the product (multiplication)
         System.out.println(x / y); // print the quotient (division)
+        System.out.println(x % y); // print the remainder (division)
     }
 }
 

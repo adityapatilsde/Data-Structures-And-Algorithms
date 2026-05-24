@@ -8,7 +8,7 @@ public class UnaryOperators {
          PRE INCREMENT ++P = Assign first print later */
 
         System.out.println(p++); // 5 print first
-        System.out.println(p); // 6 assign later
+        System.out.println(p); // 6 assign and print
 
         System.out.println(++q); // 6 assign first
         System.out.println(q); // 6  print current value
