@@ -11,7 +11,5 @@ public class RelativeOperators {
         System.out.println(p < q); // true
         System.out.println(p > q); // false
 
-
     }
-
 }
