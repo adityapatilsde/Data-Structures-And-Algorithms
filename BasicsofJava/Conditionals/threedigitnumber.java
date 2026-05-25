@@ -10,7 +10,7 @@ public class threedigitnumber {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number: ");
         int n = sc.nextInt();
-        if(n > 100 && n < 1000){
+        if(n > 99 && n < 1000){
             System.out.println(n+" is a three digit numbers");
         }
         else{
