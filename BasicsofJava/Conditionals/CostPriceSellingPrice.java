@@ -15,7 +15,7 @@ public class CostPriceSellingPrice {
             System.out.print("Your Profit is: ");
             System.out.println(b - a);
         }
-        if(a > b){
+       else if(a > b){
             System.out.print("Your loss is: ");
             System.out.println(a - b);
         }
