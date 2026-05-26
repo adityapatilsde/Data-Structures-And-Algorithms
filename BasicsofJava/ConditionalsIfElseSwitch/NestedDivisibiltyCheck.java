@@ -1,4 +1,4 @@
-package BasicsofJava.Conditionals;
+package BasicsofJava.ConditionalsIfElseSwitch;
 /*Take positive integer input and tell if it is divisible by 5 or 3
 * but not divisible by 15 .*/
 

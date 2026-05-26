@@ -1,4 +1,4 @@
-package BasicsofJava.Conditionals;
+package BasicsofJava.ConditionalsIfElseSwitch;
 /*Take three positive integers as input and print the greatest
 * number wothout using logical operators*/
 

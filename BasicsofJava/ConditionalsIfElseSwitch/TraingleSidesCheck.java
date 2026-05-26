@@ -1,4 +1,4 @@
-package BasicsofJava.Conditionals;
+package BasicsofJava.ConditionalsIfElseSwitch;
 /*Take 3 numbers input and tell if they can be the sides pf a triangle */
 
 import java.util.Scanner;
