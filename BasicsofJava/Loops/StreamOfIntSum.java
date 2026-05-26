@@ -1,5 +1,7 @@
 package BasicsofJava.Loops;
 
+/*User will input a stream of numbers at the end all should be calculated
+* and a sum should be printed of various numbers (use = while loop )*/
 import java.util.Scanner;
 public class StreamOfIntSum {
     public static void main(String[] args) {

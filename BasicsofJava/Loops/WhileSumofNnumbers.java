@@ -1,7 +1,7 @@
 package BasicsofJava.Loops;
 
 import java.util.Scanner;
-public class WhileSumofNnumbers {
+public class WhileSumofNnumbers   {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
