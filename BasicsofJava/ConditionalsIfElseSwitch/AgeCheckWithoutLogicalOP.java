@@ -1,4 +1,4 @@
-package BasicsofJava.Conditionals;
+package BasicsofJava.ConditionalsIfElseSwitch;
 /*If the ages pf ram shyam and ajay are input through the keyboard , write a
 * program to determine the youngest of the three without using logical operators*/
 

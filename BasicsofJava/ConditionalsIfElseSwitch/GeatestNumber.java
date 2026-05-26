@@ -1,4 +1,4 @@
-package BasicsofJava.Conditionals;
+package BasicsofJava.ConditionalsIfElseSwitch;
 /*Take three positive integer input and print the greatest of them*/
 
 import java.util.Scanner;

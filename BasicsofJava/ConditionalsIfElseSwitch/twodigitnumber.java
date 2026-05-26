@@ -1,4 +1,4 @@
-package BasicsofJava.Conditionals;
+package BasicsofJava.ConditionalsIfElseSwitch;
 /*Take a positive integer input and tell if it is a
  * two digit number*/
 

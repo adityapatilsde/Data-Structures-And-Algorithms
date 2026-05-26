@@ -1,4 +1,4 @@
-package BasicsofJava.Conditionals;
+package BasicsofJava.ConditionalsIfElseSwitch;
 import java.util.Scanner;
 public class AreaPerimeterGreater {
     public static void main(String[] args) {
