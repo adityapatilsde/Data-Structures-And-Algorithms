@@ -1,4 +1,4 @@
-package BasicsofJava.QuestionsSheet1A;
+package BasicsofJava.SimpleConditionsLevel1;
 
 import java.util.Scanner;
 public class VowelAndConsonantCheck {
