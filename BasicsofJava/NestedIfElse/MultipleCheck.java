@@ -1,7 +1,7 @@
-package BasicsofJava.QuestionsSheet1A;
+package BasicsofJava.NestedIfElse;
 
 import java.util.Scanner;
-public class LargerNumCheck {
+public class MultipleCheck {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -11,14 +11,14 @@ public class LargerNumCheck {
         System.out.print("Enter the second number: ");
         int b = sc.nextInt();
 
-        if(a > b){
-            System.out.println(a+ "is the greatest number");
+        if(a %b == 0){
+            System.out.println(b+" is a multiple of "+a);
         }
-        else if (b > a ) {
-            System.out.println(b+ " is the greatest number");
+        else if (b %a == 0) {
+            System.out.println(a+" is a multiple of "+b);
         }
         else {
-            System.out.println("Both the numbers are equal");
+            System.out.println("Both are not the multiples of each other");
         }
     }
 }
