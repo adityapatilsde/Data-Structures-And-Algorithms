@@ -48,7 +48,5 @@ public class NoOfDaysInAMonth {
             default:
                 System.out.println("Invalid month input");
         }
-
-
     }
 }
