@@ -12,21 +12,20 @@ public class Armstrong {
         int b = 0;
         int count = 0;
         int orignl_num = num;
-
-        while (num > 0) {
-            a = num % 10;
-            num = num / 10;
-            count += 1;
-        }
-        int temp = orignl_num;
         int answer = 0;
 
-        while (temp > 0) {
-            b = temp % 10;
-            answer += (int) Math.pow(b, count);
-            temp = temp / 10;
+       while (num > 0){
+         a =  num%10; // 1234 = 4
+           count += 1;
+           num = num/10;
+       }
 
-        }
+       int temp = orignl_num;
+       while (temp > 0){
+           b = temp%10;
+           answer += (int) Math.pow(b, count);
+           temp = temp/10;
+       }
 
         if (answer == orignl_num) {
             System.out.println(orignl_num + " is an armstrong number");

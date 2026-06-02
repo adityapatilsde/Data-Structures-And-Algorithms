@@ -7,7 +7,7 @@ public class Printing2DArrayForLoopApproach2 {
         for (int i = 0; i < multiarrr.length; i++){
             //arr[0] and arr[1]
             for (int j = 0; j < multiarrr[i].length; j++){
-                System.out.println(multiarrr[i][j]);
+                System.out.print(" "+multiarrr[i][j]);
             }
         }
     }
