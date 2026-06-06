@@ -7,12 +7,10 @@ public class SumEqualto7 {
         int n = arr.length;
         int answer = 0;
         for (int i = 0; i < n; i++){ // 5 7 10 3 4 2
-            for (int j = i + 1; j < n; j++){
-                if (arr[i] + arr[j] == x){
-                     answer++;
-                }
-                else {
-                    return -1;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] + arr[j] == x) {
+                    answer++;
+
                 }
             }
         }
@@ -31,6 +29,7 @@ public class SumEqualto7 {
         System.out.println("enter target sum:");
         int target = sc.nextInt();
 
+        System.out.print("No of elements pairs whose sum is "+target+" = ");
         System.out.println(PairsCheck(arr,target));
 
     }

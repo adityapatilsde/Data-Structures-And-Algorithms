@@ -11,7 +11,8 @@ public class ArrayReverse {
         int j =0;
 
         for (int i = n - 1; i >= 0; i--){
-            arr_2[j++] = arr[i];
+            arr_2[j] = arr[i];
+            j++;
         }
         return arr_2;
     }

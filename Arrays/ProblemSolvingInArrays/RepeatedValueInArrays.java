@@ -1,6 +1,5 @@
 package Arrays.ProblemSolvingInArrays;
 
-import Arrays.LoopsInArrays.ProblemSolving.SumOfArrElements;
 
 import java.util.Scanner;
 
