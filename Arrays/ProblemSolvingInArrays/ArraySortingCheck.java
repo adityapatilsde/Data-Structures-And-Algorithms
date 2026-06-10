@@ -5,7 +5,7 @@ public class ArraySortingCheck {
 
     static boolean SortCheck(int [] arr) {
 
-        boolean result = true; ;
+        boolean result = true;
 
         for (int i = 0; i < arr.length - 1; i++){
             if (arr[i] < arr[i+1]){
