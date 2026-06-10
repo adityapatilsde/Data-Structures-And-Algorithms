@@ -25,13 +25,9 @@ public class RoateArrayToLeftbyOne {
     static int[] rotate(int arr[], int k){
         int n = arr.length;
         k = k % n;
-        reverse(arr,0,n-k-1);
-        //printArray(arr); // debug statement
-        reverse(arr,n-1,k-1);
-        // printArray(arr); //debug statement
-        reverse(arr,0,n-1);
-      //  printArray(arr);// debug statement
-
+        reverse(arr, 0, k - 1);
+        reverse(arr, k, n - 1);
+        reverse(arr, 0, n - 1);
         return arr;
     }
     public static void main() {
