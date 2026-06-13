@@ -8,6 +8,7 @@ public class FactorialOfANumber {
         return n * factorial(n-1);
     }
     public static void main() {
+
         System.out.println(factorial(4));
     }
 }
