@@ -7,7 +7,6 @@ public class PRaiseToPowerQ {
         }
        return powerq(p,q-1)*p;
     }
-
     static void main(String[] args) {
         System.out.println(powerq(5,2));
     }

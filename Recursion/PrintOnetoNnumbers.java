@@ -2,20 +2,14 @@ package Recursion;
 
 import java.util.Scanner;
 public class PrintOnetoNnumbers {
-    static void printIncreasing(int n){
-        if (n == 1){
-            System.out.println(1);
-            return;
+    public static void printNnumbers(int n){
+        if (n == 0){ // base case
+            return ;
         }
-        printIncreasing(n-1);
-        System.out.println(n);
+        printNnumbers(n-1); // recursion
+        System.out.println(n); // self work
     }
-
-    static void main(){
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter a number: ");
-        int n = sc.nextInt();
-        printIncreasing(n);
+    public static void main(String[] args) {
+        printNnumbers(5);
     }
 }
