@@ -8,6 +8,6 @@ public class sumofFirstNnumbers {
         return sumOfDigits(n-1)+n;
     }
     static void main(String[] args) {
-        System.out.println(sumOfDigits(5));
+        System.out.println(sumOfDigits(4));
     }
 }
