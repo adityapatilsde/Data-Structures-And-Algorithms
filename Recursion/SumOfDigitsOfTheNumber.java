@@ -1,13 +1,14 @@
 package Recursion;
 
 public class SumOfDigitsOfTheNumber {
-   static void sumOfFirstN(int n){
+   static int PrintSumOfFirstN(int n){
        if (n == 0){
-           return ;
+           return n;
        }
-       sumOfFirstN(n-1);
+       return n+ PrintSumOfFirstN(n-1);
+
    }
    public static void main(String[] args) {
-       sumOfFirstN(5);
+       System.out.println(PrintSumOfFirstN(51));
    }
 }

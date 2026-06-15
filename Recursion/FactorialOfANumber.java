@@ -9,6 +9,6 @@ public class FactorialOfANumber {
     }
     public static void main() {
 
-        System.out.println(factorial(4));
+        System.out.println(factorial(5));
     }
 }
