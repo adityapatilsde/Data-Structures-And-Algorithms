@@ -31,14 +31,15 @@ public class RotateMatrixBy90Degree {
         }
         return ans;
     }
-    static int[][] rotate(int[][] matrix, int n){
+    static int[][] rotate(int[][] matrix, int r, int c){
 
-        int[][] transposed = matrixTranspose(matrix,n,n);
-        for (int i = 0; i < n; i++){
+        int[][] transposed = matrixTranspose(matrix,r,c);
+        for (int i = 0; i < matrix.length; i++){
             reverseArray(transposed[i]);
         }
         return transposed;
     }
+
     public static void main() {
         Scanner sc = new Scanner(System.in);
 
@@ -60,7 +61,7 @@ public class RotateMatrixBy90Degree {
         printMatrix(arr);
 
         System.out.println("Matrix after 90 degree rotation: ");
-        int[][] rotated = rotate(arr,r);
+        int[][] rotated = rotate(arr,r,c);
         printMatrix(rotated);
     }
 }
