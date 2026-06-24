@@ -2,23 +2,29 @@ package RandomCodesPracticeFile;
 
 import java.util.Scanner;
 public class practice {
-static int  Fibonacci(int n) {
-   if (n == 0 || n == 1) return n;
-   return Fibonacci(n-1) + Fibonacci(n - 2);
-}
- static void main(String[] args) {
-     Scanner sc = new Scanner(System.in);
-     System.out.print("Enter the number: ");
-     int n = sc.nextInt();
-    System.out.println(Fibonacci(n));
-
-     System.out.println();
-     System.out.println("================================");
-     System.out.println();
-
-     System.out.println("Fibonacci term according to 0th term series: ");
-     for (int i = 0; i < 10; i++){
-         System.out.println(Fibonacci(i));
+    static int reversenum(int num){
+        int reverse = 0;
+        while (num != 0) {
+            int digit = num % 10;       // Get the last digit
+            reverse = reverse * 10 + digit;
+            num = num / 10;             // Remove the last digit
+        }
+        return reverse;
+    }
+ static void isPalindrome(int n){
+     int temp = n;
+     int reverse = reversenum(n);
+     if (temp == reverse){
+         System.out.println("Is palindrome");
      }
+     else {
+         System.out.println("Is not palindrome");
+     }
+ }
+ public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+     System.out.print("Enter the num to check if its palindrome: ");
+     int n = sc.nextInt();
+     isPalindrome(n);
  }
 }
