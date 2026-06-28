@@ -1,6 +1,7 @@
-package BinarySearch;
+package BinarySearch.LinearImplementation;
 
 import java.util.Scanner;
+
 public class BasicLinearSearchApproach {
     static boolean search(int arr[], int x){
         boolean found = false;
