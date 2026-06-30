@@ -1,5 +1,7 @@
 package SortingAlgorithms.BubbleSort;
 
+
+import java.util.Arrays;
 import java.util.Scanner;
 public class SortAnArray {
     static void printArray(int[] arr){

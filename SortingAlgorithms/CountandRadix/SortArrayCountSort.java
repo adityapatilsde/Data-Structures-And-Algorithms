@@ -17,7 +17,6 @@ public class SortArrayCountSort {
         }
         return num;
     }
-
     static void countSort(int arr[]){
         int n = arr.length;
         int[] output = new int[n];
@@ -36,7 +35,7 @@ public class SortArrayCountSort {
         for (int i = n - 1; i >= 0; i--){
             int idx = count[arr[i]]-1;
             output[idx] = arr[i];
-            count[arr[i]]--;
+            count[arr[i]]--; // /tells i have already used this position
         }
 
         // copy all elements of output to arr
@@ -60,6 +59,5 @@ public class SortArrayCountSort {
         System.out.println("Sorted Array: ");
         countSort(arr);
         displayArray(arr);
-
     }
 }
