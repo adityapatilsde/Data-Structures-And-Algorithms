@@ -9,7 +9,8 @@ public class FindMinElementIndexInrotatedSortedArr {
             if (arr[mid] <= arr[n-1]){
                 answer = mid;
                 end = mid - 1;
-            }else {
+            }
+            else {
                 start = mid+1;
             }
         }

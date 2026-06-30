@@ -36,6 +36,5 @@ public class BasicBinarySearchArrayElement {
         int target = sc.nextInt();
 
         System.out.println("Element existence status: "+binarySearch(arr,target));
-
     }
 }
