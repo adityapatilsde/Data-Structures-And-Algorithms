@@ -2,83 +2,69 @@ package RandomCodesPracticeFile;
 
 import java.util.Scanner;
 public class practice {
-static void printArray(int arr[]){
-    for (int i = 0; i < arr.length; i++){
-        System.out.print(arr[i]+" ");
-    }
-    System.out.println();
-}
-static void bubbleSort(int arr[]){
-    int n = arr.length;
-    for (int i = 0; i < n - 1; i++ ){
-        boolean flag = false;
-        for (int j = 0; j < n - i - 1; j++){
-            int temp = arr[j];
-            arr[j] = arr[j+1];
-            arr[j+1] = temp;
-            flag = true;
+        static void displayArr(int arr[]){
+            for (int x : arr){
+                System.out.print(x+" ");
+            }
+            System.out.println();
         }
-        if (flag == false){
-            return;
+        static int findMax(int arr[]){
+            int mx = Integer.MIN_VALUE;
+            for (int i = 0; i < arr.length; i++){
+                if (arr[i] > mx){
+                    mx = arr[i];
+                }
+            }
+            return mx;
         }
-    }
-    printArray(arr);
-}
-static void selectionSort(int arr[]){
-    for (int i = 0; i < arr.length - 1; i++){
-        int min_index = i;
-        for (int j = i + 1; j < arr.length; j++){
-            if (arr[j] < arr[min_index]){
-                min_index = j;
+        static void countSort(int arr[], int place){
+            int n = arr.length;
+            int output[] = new int[n];
+            int max = findMax(arr);
+            int count[] = new int[n];
+
+            for (int i = 0; i < arr.length; i++){
+                count[arr[i]/place%10]++;
+            }
+
+            for (int i = 1; i < count.length; i++ ){
+                count[i] += count[i-1];
+            }
+
+            for (int i = n - 1; i >= 0; i--){
+                int idx = count[arr[i]/place%10]-1;
+                output[idx] = arr[i];
+                count[arr[i]/place%10]--;
+            }
+            for (int i = 0; i < arr.length; i++){
+                arr[i] = output[i];
             }
         }
-        int temp = arr[i];
-        arr[i] = arr[min_index];
-        arr[min_index] = temp;
-    }
-}
-static void merge(int arr[], int l, int mid, int r){
-    int n1 = mid - l + 1;
-    int n2 = r - mid;
-    int left[] = new int[n1];
-    int right[] = new int[n2];
-    int i ,j ,k ;
-    for (i = 0; i < n1; i++) left[i] = arr[l+i];
-    for (j = 0; j < n2; j++) right[j] = arr[mid+1+j];
-    i = 0; j = 0; k = l;
+        static void radixSort(int arr[]){
+            int max = findMax(arr);
+            for (int place = 1; max/place > 0; place *= 10){
+                countSort(arr,place);
+            }
+        }
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
 
-    while (i < n1 && j < n2){
-        if (left[i] < right[j]){
-            arr[k++] = left[i++];
+            System.out.print("Enter the size of the array: ");
+            int n = sc.nextInt();
+            int arr[] = new int[n];
+
+            System.out.println("Enter "+n+" elements: ");
+            for (int i = 0; i < arr.length; i++){
+                arr[i] = sc.nextInt();
+            }
+            System.out.println("Original Array: ");
+            displayArr(arr);
+
+            System.out.println("Sorted Array: ");
+            radixSort(arr);
+            displayArr(arr);
         }
-        else {
-            arr[k++] = right[j++];
-        }
     }
-    while (i < n1){
-        arr[k++] = left[i++];
-    }
-    while (j < n2){
-        arr[k++] = right[j++];
-    }
-}
-static void mergesort(int arr[],int left, int right){
-    if (left >= right) return;
-    int mid = (left + right) / 2;
-    mergesort(arr,left,mid);
-    mergesort(arr,mid+1,right);
-    merge(arr,left,mid,right);
-}
-  public static void main(String[] args) {
-      int arr[] = {50,40,30,20,10};
-      System.out.println("Orignal Array: ");
-      printArray(arr);
-     // bubbleSort(arr);
-      System.out.println("Sorted Array: ");
-//      selectionSort(arr);
-//      bubbleSort(arr);
-      mergesort(arr,0,arr.length-1);
-      printArray(arr);
-  }
- }
+
+
 
