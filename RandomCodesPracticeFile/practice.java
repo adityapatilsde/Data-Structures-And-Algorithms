@@ -2,68 +2,64 @@ package RandomCodesPracticeFile;
 
 import java.util.Scanner;
 public class practice {
-        static void displayArr(int arr[]){
-            for (int x : arr){
-                System.out.print(x+" ");
-            }
-            System.out.println();
+    static void displayArray(int arr[]){
+        for (int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]+" ");
         }
-        static int findMax(int arr[]){
-            int mx = Integer.MIN_VALUE;
-            for (int i = 0; i < arr.length; i++){
-                if (arr[i] > mx){
-                    mx = arr[i];
-                }
-            }
-            return mx;
-        }
-        static void countSort(int arr[], int place){
-            int n = arr.length;
-            int output[] = new int[n];
-            int max = findMax(arr);
-            int count[] = new int[n];
-
-            for (int i = 0; i < arr.length; i++){
-                count[arr[i]/place%10]++;
-            }
-
-            for (int i = 1; i < count.length; i++ ){
-                count[i] += count[i-1];
-            }
-
-            for (int i = n - 1; i >= 0; i--){
-                int idx = count[arr[i]/place%10]-1;
-                output[idx] = arr[i];
-                count[arr[i]/place%10]--;
-            }
-            for (int i = 0; i < arr.length; i++){
-                arr[i] = output[i];
+        System.out.println();
+    }
+    static int findMax(int arr[]) {
+        int num = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > num) {
+                num = arr[i];
             }
         }
-        static void radixSort(int arr[]){
-            int max = findMax(arr);
-            for (int place = 1; max/place > 0; place *= 10){
-                countSort(arr,place);
-            }
+        return num;
+    }
+    static void countSort(int arr[]){
+        int n = arr.length;
+        int[] output = new int[n];
+        int max = findMax(arr); // Find the largest element of the arr
+        int [] count = new int[max+1];
+        for (int i = 0; i < arr.length; i++){ // Make frequency array
+            count[arr[i]]++;
         }
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
 
-            System.out.print("Enter the size of the array: ");
-            int n = sc.nextInt();
-            int arr[] = new int[n];
-
-            System.out.println("Enter "+n+" elements: ");
-            for (int i = 0; i < arr.length; i++){
-                arr[i] = sc.nextInt();
-            }
-            System.out.println("Original Array: ");
-            displayArr(arr);
-
-            System.out.println("Sorted Array: ");
-            radixSort(arr);
-            displayArr(arr);
+        //Make prefix sum array of count Array
+        for (int i = 1; i < count.length; i++){
+            count[i] += count[i-1];
         }
+
+        //Find the index of each element in the original array and put it in output array
+        for (int i = n - 1; i >= 0; i--){
+            int idx = count[arr[i]]-1;
+            output[idx] = arr[i];
+            count[arr[i]]--; // /tells i have already used this position
+        }
+
+        // copy all elements of output to arr
+        for (int i = 0; i < arr.length; i++){
+            arr[i] = output[i];
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the size of the array: ");
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+
+        System.out.println("Enter "+n+" elements: ");
+        for (int i = 0; i < arr.length; i++){
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("Orignal Array: ");
+        displayArray(arr);
+        System.out.println("Sorted Array: ");
+        countSort(arr);
+        displayArray(arr);
+    }
     }
 
 
