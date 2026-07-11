@@ -1,6 +1,6 @@
 package LinkedList.LinkedList1;
 
-public class CreateLinkLIst {
+public class CreateLinkListBasic {
     public  static class Node{
         int data;
         Node next;
@@ -15,6 +15,7 @@ public class CreateLinkLIst {
         Node c = new Node(9);
         Node d = new Node(8);
         Node e = new Node(16);
+        Node f = new Node(10);
 
         //now we have created nodes but still not connected them
         // 5 , 3 , 9 , 8 , 16
