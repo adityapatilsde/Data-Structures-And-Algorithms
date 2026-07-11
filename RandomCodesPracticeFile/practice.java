@@ -2,65 +2,64 @@ package RandomCodesPracticeFile;
 
 import java.util.Scanner;
 public class practice {
-    static void displayArray(int arr[]){
-        for (int i = 0; i < arr.length; i++){
-            System.out.print(arr[i]+" ");
+public static class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data = data;
+    }
+}
+public static class LinkedList{
+    Node head = null;
+    Node tail = null;
+
+    void insertAtHead(int val){
+        Node temp = new Node(val);
+        if (head == null){
+            head = temp;
+            tail = temp;
+        }
+        else {
+            temp.next = head;
+            head = temp;
+        }
+    }
+
+    void insertAtTail(int val){
+        Node temp = new Node(val);
+        if (head == null){
+            head = temp;
+            tail = temp;
+        }
+        else {
+            tail.next = temp;
+            tail = temp;
+        }
+    }
+
+    void display(){
+        Node temp = head;
+        while (temp != null){
+            System.out.print(temp.data+" ");
+            temp = temp.next;
         }
         System.out.println();
     }
-    static int findMax(int arr[]) {
-        int num = Integer.MIN_VALUE;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > num) {
-                num = arr[i];
-            }
-        }
-        return num;
-    }
-    static void countSort(int arr[]){
-        int n = arr.length;
-        int[] output = new int[n];
-        int max = findMax(arr); // Find the largest element of the arr
-        int [] count = new int[max+1];
-        for (int i = 0; i < arr.length; i++){ // Make frequency array
-            count[arr[i]]++;
-        }
+}
+public static void main(String[] args) {
+    LinkedList ll = new LinkedList();
 
-        //Make prefix sum array of count Array
-        for (int i = 1; i < count.length; i++){
-            count[i] += count[i-1];
-        }
+    ll.insertAtTail(10);
+    ll.display();
+    ll.insertAtTail(20);
+    ll.display();
+    ll.insertAtTail(30);
+    ll.display();
+    ll.insertAtHead(0);
+    ll.display();
+}
+}
 
-        //Find the index of each element in the original array and put it in output array
-        for (int i = n - 1; i >= 0; i--){
-            int idx = count[arr[i]]-1;
-            output[idx] = arr[i];
-            count[arr[i]]--; // /tells i have already used this position
-        }
-
-        // copy all elements of output to arr
-        for (int i = 0; i < arr.length; i++){
-            arr[i] = output[i];
-        }
-    }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter the size of the array: ");
-        int n = sc.nextInt();
-        int arr[] = new int[n];
-
-        System.out.println("Enter "+n+" elements: ");
-        for (int i = 0; i < arr.length; i++){
-            arr[i] = sc.nextInt();
-        }
-        System.out.println("Orignal Array: ");
-        displayArray(arr);
-        System.out.println("Sorted Array: ");
-        countSort(arr);
-        displayArray(arr);
-    }
-    }
 
 
 
