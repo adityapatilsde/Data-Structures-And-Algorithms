@@ -1,8 +1,6 @@
 package Arrays.ProblemSolvingInArrays.TwoPointerQuestions;
 
-/*given an integer array 'a' sorted in non decreasing order, return an array
-of the sqaures of each number sorted in non - decreasing order*/
-import java.lang.classfile.constantpool.FloatEntry;
+
 import java.util.Scanner;
 import java.util.Arrays;
 public class SortSqaureValuesInDesecnedingOrderApproach2 {
