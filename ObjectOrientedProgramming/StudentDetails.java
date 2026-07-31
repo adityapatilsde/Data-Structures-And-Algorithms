@@ -40,6 +40,7 @@ public class StudentDetails {
             students[i].takeInput(sc);
         }
         System.out.println("******* Student details **********");
+        System.out.println();
         for (int i = 0; i < studentNum; i++){
             students[i].display();
         }

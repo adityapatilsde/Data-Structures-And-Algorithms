@@ -2,7 +2,7 @@ package ObjectOrientedProgramming;
 
 public  class GettersSetters {
     public static class student {
-        public String name;
+       public String name;
         private int rno;
         double percent;
 
