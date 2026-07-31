@@ -1,39 +1,39 @@
 package ObjectOrientedProgramming;
 
-public class Constructor {
-    public static class student{
-        String name;
-        int rno;
-        double cgpa;
+import Arrays.practice;
 
-        public student(){ //Default constructor
+public class Constructor {
+    public static class Book{
+        String name;
+        String title;
+        double price;
+
+        public Book(){ //Default constructor
 
         }
-        public student(String name, int rno, double cgpa){ //Parametrized Constructor
+        public Book(String name, String title, double price){ //Parametrized Constructor
             this.name = name;
-            this.rno = rno;
-            this.cgpa = cgpa;
+            this.title = title;
+            this.price = price;
         }
         void display(){
-            System.out.println("Student name: "+name);
-            System.out.println("Student reg no: "+rno);
-            System.out.println("Student cgpa: "+cgpa);
+            System.out.println("Book name: "+name);
+            System.out.println("Author's name: "+title);
+            System.out.println("Book's price: "+price);
             System.out.println();
         }
     }
 
     public static void main(String[] args) {
-        student s1 = new student("Aditya",992,10.0);
-        s1.display();
-        student s2 = new student("Shubh",996,10.0);
+        Book s2 = new Book("C programming","Dennis ritchie",400.00);
         s2.display();
 
         //s1 and s2 are accessing parametrized constructor
 
-        student s3 = new student();
-        s3.name = "Adi";
-        s3.rno = 994;
-        s3.cgpa = 9.8;
+        Book s3 = new Book();
+        s3.name = "Data structures and algorithms";
+        s3.title = "Allen";
+        s3.price = 500;
         s3.display();
 
         //s3 is accessing default constructor
