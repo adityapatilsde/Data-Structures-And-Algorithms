@@ -87,7 +87,6 @@ public class StudentManagmentSystem {
             grading();
         }
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Student s = new Student();
