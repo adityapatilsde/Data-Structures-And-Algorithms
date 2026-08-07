@@ -1,8 +1,7 @@
 package PatternPrintingrevision;
-import Arrays.Level2ArrayProblemSolving.FirstOccurence;
 
 import java.util.Scanner;
-public class RectangularPattern {
+public class PatternPrinting {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
