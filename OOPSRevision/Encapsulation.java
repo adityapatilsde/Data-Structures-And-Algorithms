@@ -1,4 +1,4 @@
-package Revision;
+package OOPSRevision;
 import java.util.Scanner;
 public class Encapsulation {
     static public class BankManagementSystem {

@@ -1,4 +1,4 @@
-package Revision;
+package OOPSRevision;
 
 public class inheritance {
      public class Student{
