@@ -1,6 +1,4 @@
-package Revision;
-
-import ObjectOrientedProgramming.StudentManagmentSystem;
+package OOPSRevision;
 
 public class Constructors {
     static public class StudentDetails{
@@ -18,6 +16,7 @@ public class Constructors {
              this.studentId = studentId;
          }
          StudentDetails(double cgpa){ //  constructor overloading
+
             this.cgpa = cgpa;
          }
          StudentDetails(StudentDetails s){ // copy constructor
