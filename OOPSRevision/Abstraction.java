@@ -1,4 +1,4 @@
-package Revision;
+package OOPSRevision;
 import java.util.Scanner;
 public class Abstraction {
     abstract class CityBank{
@@ -40,6 +40,5 @@ public class Abstraction {
         cb = obj.new Axis();
         cb.displayBankName();
         cb.interestRate();;
-
     }
 }
