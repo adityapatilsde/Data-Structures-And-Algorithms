@@ -35,7 +35,13 @@ public class ClubManagementSystem {
         if (choice >= 0 && choice < 4) {
             switch (choice) {
                 case 0:
-                    president++;
+                    if (president >= 1) {
+                        System.out.println("President already exists!");
+                        return;
+                    }
+                    else {
+                        president++;
+                    }
                     break;
                 case 1:
                     vicePresident++;
@@ -70,6 +76,7 @@ public class ClubManagementSystem {
         System.out.print("Enter "+memberRole[choice]+" email Id: ");
         String email = sc.nextLine();
         System.out.println();
+
 
 
         System.out.println("Club total member's analysis: ");
