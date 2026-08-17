@@ -9,6 +9,7 @@ public class event {
         private String eventDescription;
         private int clubId;
 
+        //constructor
         public event(int eventId, String eventName, String eventDate,
                      String eventVenue, String eventDescription, int clubId) {
 
