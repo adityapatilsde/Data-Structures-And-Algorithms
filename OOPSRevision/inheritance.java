@@ -1,55 +1,70 @@
-package OOPSRevision;
 
-public class inheritance {
 
-        static class Person {
-            String name;
+import java.util.Scanner;
 
-            Person(String name) {
-                this.name = name;
-            }
+class Product {
+    int id;
+    String name;
+    double price;
+    int quantity;
 
-            void displayName() {
-                System.out.println("Name: " + name);
-            }
-        }
-
-        static class Student extends Person {
-            String department;
-
-            Student(String name, String department) {
-                super(name);
-                this.department = department;
-            }
-
-            void displayStudent() {
-                displayName();
-                System.out.println("Department: " + department);
-            }
-        }
-
-        static class Teacher extends Person {
-            String subject;
-
-            Teacher(String name, String subject) {
-                super(name);
-                this.subject = subject;
-            }
-
-            void displayTeacher() {
-                displayName();
-                System.out.println("Subject: " + subject);
-            }
-        }
-
-        public static void main(String[] args) {
-
-            Student s = new Student("adii", "Computer Science");
-            Teacher t = new Teacher("shubh", "Mathematics");
-
-            s.displayStudent();
-            t.displayTeacher();
-        }
+    Product(int id, String name, double price, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
     }
 
+    void display() {
+        double totalPrice = price * quantity;
+        double discount;
 
+        if (totalPrice >= 5000) {
+            discount = totalPrice * 0.10;
+        } else {
+            discount = totalPrice * 0.05;
+        }
+
+        double finalPrice = totalPrice - discount;
+
+        System.out.println("Product ID: " + id);
+        System.out.println("Name: " + name);
+        System.out.println("Total Price: ₹" + totalPrice);
+        System.out.println("Discount: ₹" + discount);
+        System.out.println("Final Price: ₹" + finalPrice);
+        System.out.println();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        Product[] products = new Product[5];
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Product " + (i + 1) + ":");
+
+            System.out.print("ID: ");
+            int id = sc.nextInt();
+
+            System.out.print("Name: ");
+            String name = sc.next();
+
+            System.out.print("Price: ");
+            double price = sc.nextDouble();
+
+            System.out.print("Quantity: ");
+            int quantity = sc.nextInt();
+
+            products[i] = new Product(id, name, price, quantity);
+        }
+
+        System.out.println("\nProduct Billing Details:");
+
+        for (int i = 0; i < 5; i++) {
+            products[i].display();
+        }
+    }
+}
