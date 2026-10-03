@@ -133,7 +133,6 @@ class Conditions{
             System.out.println("Invalid month");
         }
     }
-   static
 }
 public class ConditionsPractice {
 }
