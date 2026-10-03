@@ -1,5 +1,4 @@
 package ArraysRevision;
-import Arrays.Level2ArrayProblemSolving.LastOccurence;
 
 import java.util.Scanner;
 public class arraysRevise {
